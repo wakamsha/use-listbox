@@ -22,6 +22,7 @@ export const Basic = () => {
   return (
     <div className={styleSection} aria-expanded={active}>
       <button
+        className={styleTrigger}
         ref={triggerProps.ref}
         onKeyDown={triggerProps.onKeyDown}
         onClick={triggerProps.onClick}
@@ -62,6 +63,12 @@ const styleSection = css`
   position: relative;
 `;
 
+const styleTrigger = css`
+  padding: 8px 16px;
+  font-size: 18px;
+  cursor: pointer;
+`;
+
 const styleMenu = css`
   position: absolute;
   display: none;
@@ -82,7 +89,7 @@ const styleMenu = css`
 const styleMenuItem = css`
   display: block;
   width: 100%;
-  padding: 4px 8px;
+  padding: 8px;
   text-align: left;
   cursor: pointer;
   background: transparent;
@@ -103,6 +110,7 @@ const styleLog = css`
   max-width: 100%;
   padding: 16px;
   overflow: auto;
+  font-size: 16px;
   background-color: #f6f6f8;
   border: 1px solid #bfc1c9;
 `;
