@@ -1,0 +1,11 @@
+{
+  "ignorePaths": [
+    "./node_modules/**"
+  ],
+  "words": [
+    "haspopup",
+    "listbox",
+    "noninteractive",
+    "plusplus"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@wakamsha/use-listbox",
+  "version": "1.0.0",
+  "description": "A simple React Hook that Provides the behavior and accessibility implementation for a ListBox component.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:wakamsha/use-listbox.git",
+  "author": "wakamsha <wakamsha@gmail.com> (https://twitter.com/wakamsha)",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "  prettier -c    src/**/*.ts; eslint -c .eslintrc.js       src/**/*.ts",
+    "format": "prettier -c -w src/**/*.ts; eslint -c .eslintrc.js --fix src/**/*.ts",
+    "build": "tsc --project tsconfig.build.json --declaration",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "cspell": "5.13.4",
+    "eslint": "8.5.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest": "25.3.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.4",
+    "prettier": "2.5.1",
+    "prettier-plugin-organize-imports": "2.3.4",
+    "typescript": "4.5.4"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "cspell",
+      "prettier -c -w",
+      "eslint -c .eslintrc.js --fix",
+      "stylelint --cache --fix"
+    ]
+  }
+}
