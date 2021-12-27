@@ -35,7 +35,7 @@ export const App = () => {
   return (
     <section aria-expanded={active}>
       <button {...triggerProps}>Open</button>
-      <ul className={styleMenu} role="menu" aria-hidden={!active}>
+      <ul role="menu" aria-hidden={!active}>
         {menuItems.map((item, index) => (
           <li key={item}>
             <button {...itemProps[index]} onClick={alert}>
