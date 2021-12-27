@@ -2,6 +2,17 @@
   "name": "@wakamsha/use-listbox",
   "version": "1.0.0",
   "description": "A simple React Hook that Provides the behavior and accessibility implementation for a ListBox component.",
+  "keywords": [
+    "react",
+    "react hooks",
+    "accessible",
+    "accessibility",
+    "a11y",
+    "wai-aria",
+    "dropdown",
+    "menu",
+    "contextmenu"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:wakamsha/use-listbox.git",

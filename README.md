@@ -22,7 +22,7 @@ yarn add @wakamsha/use-listbox
 npm install @wakamsha/use-listbox
 ```
 
-### BASIC USAGE
+### GETTING STARTED
 
 ```tsx
 import { useListBox } from '@wakamsha/use-listbox';
