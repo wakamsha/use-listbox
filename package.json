@@ -15,6 +15,7 @@
     "build-storybook": "build-storybook",
     "build": "tsc --project tsconfig.build.json --declaration",
     "prepublishOnly": "npm run build",
+    "predeploy": "build-storybook",
     "deploy": "gh-pages -d storybook-static"
   },
   "devDependencies": {
