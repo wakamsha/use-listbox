@@ -9,18 +9,26 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
-    "lint": "  prettier -c    src/**/*.ts; eslint -c .eslintrc.js       src/**/*.ts",
-    "format": "prettier -c -w src/**/*.ts; eslint -c .eslintrc.js --fix src/**/*.ts",
+    "lint": "  prettier -c    src/**/*.{ts,tsx}; eslint -c .eslintrc.js       src/**/*.{ts,tsx}",
+    "format": "prettier -c -w src/**/*.{ts,tsx}; eslint -c .eslintrc.js --fix src/**/*.{ts,tsx}",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "build": "tsc --project tsconfig.build.json --declaration",
     "prepublishOnly": "npm run build"
   },
-  "peerDependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@emotion/css": "11.7.1",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "@stylelint/postcss-css-in-js": "0.37.2",
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
+    "@typescript-eslint/eslint-plugin": "5.8.0",
+    "@typescript-eslint/parser": "5.8.0",
+    "babel-loader": "^8.2.3",
     "cspell": "5.13.4",
     "eslint": "8.5.0",
     "eslint-config-airbnb": "19.0.4",
@@ -30,14 +38,22 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-storybook": "^0.5.5",
     "husky": "7.0.4",
     "lint-staged": "12.1.4",
+    "postcss-syntax": "0.36.2",
     "prettier": "2.5.1",
     "prettier-plugin-organize-imports": "2.3.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "stylelint": "14.2.0",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-recess-order": "3.0.0",
+    "stylelint-config-recommended": "6.0.0",
     "typescript": "4.5.4"
   },
   "lint-staged": {
-    "src/**/*.ts": [
+    "src/**/*.{ts,tsx}": [
       "cspell",
       "prettier -c -w",
       "eslint -c .eslintrc.js --fix",

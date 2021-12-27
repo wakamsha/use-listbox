@@ -1,12 +1,5 @@
 module.exports = {
-  extends: [
-    'airbnb',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/errors',
-    'plugin:react/recommended',
-    'prettier',
-  ],
+  extends: ["airbnb", "eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:import/errors", "plugin:react/recommended", "prettier", "plugin:storybook/recommended"],
   env: {
     browser: true,
     es2021: true,
@@ -27,58 +20,38 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
     '@typescript-eslint/consistent-type-imports': ['error'],
     '@typescript-eslint/dot-notation': ['error'],
-    '@typescript-eslint/no-unused-expressions': [
-      'error',
-      {
-        allowShortCircuit: true,
-        allowTernary: true,
-        allowTaggedTemplates: true,
-      },
-    ],
+    '@typescript-eslint/no-unused-expressions': ['error', {
+      allowShortCircuit: true,
+      allowTernary: true,
+      allowTaggedTemplates: true,
+    }],
     '@typescript-eslint/no-useless-constructor': ['error'],
     '@typescript-eslint/switch-exhaustiveness-check': ['error'],
     'arrow-body-style': ['error', 'as-needed'],
     'func-names': ['error'],
-    'lines-between-class-members': [
-      'error',
-      'always',
-      {
-        exceptAfterSingleLine: true,
-      },
-    ],
+    'lines-between-class-members': ['error', 'always', {
+      exceptAfterSingleLine: true,
+    }],
     'no-case-declarations': ['error'],
-    'no-console': [
-      'error',
-      {
-        allow: ['info', 'warn', 'error', 'time', 'timeEnd'],
-      },
-    ],
-    'no-restricted-syntax': [
-      'error',
-      {
-        selector: 'TSEnumDeclaration',
-        message: 'Do not declare enums',
-      },
-    ],
-    'react/function-component-definition': [
-      'error',
-      {
-        namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function',
-      },
-    ],
-    'react/jsx-filename-extension': [
-      'error',
-      {
-        extensions: ['.tsx'],
-      },
-    ],
+    'no-console': ['error', {
+      allow: ['info', 'warn', 'error', 'time', 'timeEnd']
+    }],
+    'no-restricted-syntax': ['error', {
+      selector: 'TSEnumDeclaration',
+      message: 'Do not declare enums',
+    }],
+    'react/function-component-definition': ['error', {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function'
+    }],
+    'react/jsx-filename-extension': ['error', {
+      extensions: ['.tsx']
+    }],
     'react/jsx-key': ['error'],
     'react/jsx-no-target-blank': ['error'],
     'react/sort-comp': ['error'],
     'react-hooks/exhaustive-deps': ['warn'],
     'react-hooks/rules-of-hooks': ['error'],
-
     // Disable
     '@typescript-eslint/ban-types': ['off'],
     '@typescript-eslint/explicit-function-return-type': ['off'],
@@ -124,13 +97,11 @@ module.exports = {
     'react/react-in-jsx-scope': ['off'],
     'react/require-default-props': ['off'],
   },
-  overrides: [
-    {
-      files: ['*.js'],
-      rules: {
-        '@typescript-eslint/ban-ts-comment': ['off'],
-        '@typescript-eslint/no-var-requires': ['off'],
-      },
+  overrides: [{
+    files: ['*.js'],
+    rules: {
+      '@typescript-eslint/ban-ts-comment': ['off'],
+      '@typescript-eslint/no-var-requires': ['off'],
     },
-  ],
+  }],
 };
