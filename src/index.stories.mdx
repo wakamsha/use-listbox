@@ -1,0 +1,103 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Basic } from './index.stories';
+
+<Meta title="useListBox" />
+
+# useListBox
+
+A simple React Hook that Provides the behavior and accessibility implementation for a listbox component.
+
+## Basic Usage
+
+```tsx
+import { useListBox } from '@wakamsha/use-listbox';
+
+export const App = () => {
+  const menuItems = ['foo', 'bar', 'baz'];
+
+  const { itemProps, active, triggerProps } = useListBox(menuItems.length);
+
+  return (
+    <section aria-expanded={active}>
+      <button {...triggerProps}>Open</button>
+      <ul role="menu" aria-hidden={!active}>
+        {menuItems.map((item, index) => (
+          <li key={item}>
+            <button {...itemProps[index]} onClick={alert}>
+              {item}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+```
+
+### Demo
+
+<Canvas>
+  <Story name="Basic">
+    <Basic />
+  </Story>
+</Canvas>
+
+## API
+
+```tsx
+useListBox(itemCount: number): Readonly<{
+    triggerProps: {
+        ref: React.RefObject<HTMLButtonElement>;
+        onKeyDown: React.KeyboardEventHandler<HTMLButtonElement>;
+        onClick: React.MouseEventHandler<HTMLButtonElement>;
+        tabIndex: 0;
+        role: 'button';
+        'aria-haspopup': true;
+        'aria-expanded': boolean;
+    };
+    itemProps: {
+        onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => void;
+        tabIndex: -1;
+        role: "menuitem";
+        ref: React.RefObject<any>;
+    }[];
+    active: boolean;
+    setActive: React.Dispatch<React.SetStateAction<boolean>>;
+}>
+```
+
+### Props
+
+| NAME        | TYPE     | DESCRIPTION                         |
+| :---------- | :------- | :---------------------------------- |
+| `itemCount` | `number` | How many items your menu will have. |
+
+### Return Object
+
+| NAME           | TYPE                                            | DESCRIPTION                                                                                                                                       |
+| :------------- | :---------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `triggerProps` | `TriggerProps`                                  | An object used as a property of an HTML element that controls the activation and deactivation of ListBox.                                         |
+| `itemProps`    | `Array<ItemProps>`                              | An array of objects used as properties of HTML elements that function as menu items in ListBox.                                                   |
+| `active`       | `boolean`                                       | A Boolean value indicating whether or not ListBox is active. The application developer uses this value to set whether or not to display the menu. |
+| `setActive`    | `React.Dispatch<React.SetStateAction<boolean>>` | It is used by application developers to control the activation and deactivation of menus in their programs.                                       |
+
+#### TriggerProps
+
+| NAME            | TYPE                                         | DESCRIPTION                                                                                                   |
+| :-------------- | :------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| `ref`           | `React.RefObject<HTMLButtonElement>`         | A React ref applied to the `<button />` element, used to manage focus.                                        |
+| `onKeyDown`     | `React.RefObject<HTMLButtonElement>`         | A function which manages the behavior of your ListBox when a key is pressed while focused on the menu button. |
+| `onClick`       | `React.MouseEventHandler<HTMLButtonElement>` | The same function as `onKeyDown()`, but its behavior differs somewhat for click events.                       |
+| `tabIndex`      | `0`                                          | Sets the tab index property of the `<button />` element.                                                      |
+| `role`          | `button`                                     | Set `button` to comply with WAI-ARIA guidelines.                                                              |
+| `aria-haspopup` | `true`                                       | An ARIA attribute indicating this button has a related menu element.                                          |
+| `aria-expanded` | `boolean`                                    | An ARIA attribute indicating whether the menu is currently open.                                              |
+
+#### ItemProps
+
+| NAME        | TYPE                                            | DESCRIPTION                                                                                                    |
+| :---------- | :---------------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
+| `onKeyDown` | `(e: React.KeyboardEvent<HTMLElement>) => void` | This function controls the behavior of the list box menu when a key is pressed while the menu item is focused. |
+| `tabIndex`  | `-1`                                            | Set to `-1` to disable the browser's native focus logic.                                                       |
+| `role`      | `menuitem`                                      | Set `menuitem` to comply with WAI-ARIA guidelines.                                                             |
+| `ref`       | `React.RefObject<any>`                          | RefObject to be applied to each menu item, used to control the focus handling.                                 |

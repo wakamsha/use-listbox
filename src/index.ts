@@ -17,14 +17,43 @@ type TriggerProps = {
 >;
 
 type Response = Readonly<{
+  /**
+   * An object used as a property of an HTML element that controls
+   * the activation and deactivation of ListBox.
+   */
   triggerProps: TriggerProps;
+  /**
+   * An array of objects used as properties of HTML elements
+   * that function as menu items in ListBox.
+   */
   itemProps: {
+    /**
+     * This function controls the behavior of the list box menu
+     * when a key is pressed while the menu item is focused.
+     */
     onKeyDown: (e: KeyboardEvent<HTMLElement>) => void;
+    /**
+     * Set to `-1` to disable the browser's native focus logic.
+     */
     tabIndex: -1;
+    /**
+     * Set `menuitem` to comply with WAI-ARIA guidelines.
+     */
     role: 'menuitem';
+    /**
+     * RefObject to be applied to each menu item, used to control the focus handling.
+     */
     ref: RefObject<any>;
   }[];
+  /**
+   * A Boolean value indicating whether or not ListBox is active.
+   * The application developer uses this value to set whether or not to display the menu.
+   */
   active: boolean;
+  /**
+   * It is used by application developers to control the activation
+   * and deactivation of menus in their programs.
+   */
   setActive: Dispatch<SetStateAction<boolean>>;
 }>;
 
