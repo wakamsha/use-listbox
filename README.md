@@ -2,7 +2,7 @@
 
 > A simple React Hook that Provides the behavior and accessibility implementation for a listbox component.
 
-**[DEMO](https://wakamsha.github.io/use-listbox/?path=/story/uselistbox--basic)**
+**[Demo and Document](https://wakamsha.github.io/use-listbox/?path=/docs/uselistbox--basic)**
 
 ![mv](https://user-images.githubusercontent.com/2629981/147489862-a9f6d7c1-6ea6-41e8-8472-a50d768c0c7f.gif)
 

@@ -2,11 +2,6 @@ import { css } from '@emotion/css';
 import { useState } from 'react';
 import { useListBox } from '.';
 
-export default {
-  title: 'useListBox',
-  argTypes: { onClick: { action: 'clicked' } },
-};
-
 export const Basic = () => {
   const menuItems = ['One', 'Two', 'Three', 'foo', 'bar', 'baz', 'hello', 'world'];
 
