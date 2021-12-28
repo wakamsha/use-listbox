@@ -13,23 +13,34 @@ A simple React Hook that Provides the behavior and accessibility implementation 
 import { useListBox } from '@wakamsha/use-listbox';
 
 export const App = () => {
-  const menuItems = ['foo', 'bar', 'baz'];
+  const menuItems = ['One', 'Two', 'Three', 'foo', 'bar', 'baz', 'hello', 'world'];
 
-  const { itemProps, active, triggerProps } = useListBox(menuItems.length);
+  const { itemProps, active, setActive, triggerProps } = useListBox(menuItems.length);
+
+  const [value, setValue] = useState('');
+
+  const handleSelect = (value: string) => {
+    setValue(value);
+    setActive(false);
+  };
 
   return (
-    <section aria-expanded={active}>
-      <button {...triggerProps}>Open</button>
+    <div aria-expanded={active}>
+      <button {...triggerProps}>Menu</button>
       <ul role="menu" aria-hidden={!active}>
         {menuItems.map((item, index) => (
           <li key={item}>
-            <button {...itemProps[index]} onClick={alert}>
+            <button onClick={() => handleSelect(item)} {...itemProps[index]}>
               {item}
             </button>
           </li>
         ))}
       </ul>
-    </section>
+      <hr style={{ marginTop: 160 }} />
+      <pre>
+        <code>{JSON.stringify({ value }, null, 2)}</code>
+      </pre>
+    </div>
   );
 };
 ```
