@@ -22,15 +22,15 @@
     reviewers: ['wakamsha'],
   },
   packageRules: [
-    {
-      groupName: 'Node.js',
-      matchPackageNames: ['node', 'circleci/node'],
-      // この正規表現は､下記を表す。
-      // - Major: 偶数のみ
-      // - Minor: 全て対象
-      // - Patch: 0 のみ対象
-      allowedVersions: '/^[0-9]+[24680]\\.[0-9]+\\.[0-9]+$/',
-    },
+    // {
+    //   groupName: 'Node.js',
+    //   matchPackageNames: ['node'],
+    //   // この正規表現は､下記を表す。
+    //   // - Major: 偶数のみ
+    //   // - Minor: 全て対象
+    //   // - Patch: 0 のみ対象
+    //   allowedVersions: '/^[0-9]+[24680]\\.[0-9]+\\.[0-9]+$/',
+    // },
     {
       groupName: 'React families',
       matchPackagePatterns: ['^react', '^@types/react'],

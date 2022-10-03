@@ -6,6 +6,7 @@
     "haspopup",
     "listbox",
     "noninteractive",
-    "plusplus"
+    "plusplus",
+    "stylelint"
   ]
 }

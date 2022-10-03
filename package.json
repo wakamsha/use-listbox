@@ -18,6 +18,9 @@
   "repository": "git@github.com:wakamsha/use-listbox.git",
   "author": "wakamsha <wakamsha@gmail.com> (https://twitter.com/wakamsha)",
   "license": "MIT",
+  "engines": {
+    "node": "16.13.0"
+  },
   "scripts": {
     "prepare": "husky install",
     "lint": "  prettier -c    src/**/*.{ts,tsx}; eslint -c .eslintrc.js       src/**/*.{ts,tsx}",
@@ -73,5 +76,6 @@
       "eslint -c .eslintrc.js --fix",
       "stylelint --cache --fix"
     ]
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
