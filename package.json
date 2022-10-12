@@ -19,7 +19,7 @@
   "author": "wakamsha <wakamsha@gmail.com> (https://twitter.com/wakamsha)",
   "license": "MIT",
   "engines": {
-    "node": "16.13.0"
+    "node": "16.18.0"
   },
   "scripts": {
     "prepare": "husky install",
