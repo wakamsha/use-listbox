@@ -33,7 +33,7 @@
     "deploy": "gh-pages -d storybook-static"
   },
   "devDependencies": {
-    "@babel/core": "7.19.6",
+    "@babel/core": "7.20.2",
     "@emotion/css": "11.10.5",
     "@storybook/addon-actions": "6.5.13",
     "@storybook/addon-essentials": "6.5.13",
