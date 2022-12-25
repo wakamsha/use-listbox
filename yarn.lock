@@ -4846,7 +4846,7 @@ __metadata:
     react-dom: 17.0.2
     stylelint: 14.16.0
     stylelint-config-prettier: 9.0.4
-    stylelint-config-recess-order: 3.0.0
+    stylelint-config-recess-order: 3.1.0
     stylelint-config-recommended: 9.0.0
     typescript: 4.9.4
   languageName: unknown
@@ -15776,14 +15776,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recess-order@npm:3.0.0":
-  version: 3.0.0
-  resolution: "stylelint-config-recess-order@npm:3.0.0"
+"stylelint-config-recess-order@npm:3.1.0":
+  version: 3.1.0
+  resolution: "stylelint-config-recess-order@npm:3.1.0"
   dependencies:
     stylelint-order: 5.x
   peerDependencies:
     stylelint: ">=14"
-  checksum: b2607c87ad1e1e32e6c5eb00479fc566e5f1778bfdf93858cb9ee74a1a5c570581578e90bb9918ea0e5f202e5dc73bcc507afde31386aa9d19e78febedd401a7
+  checksum: e5fec58f0c69829cc5a51da309727400beb8853bb65b27d7e71dcb4a3f453ea30079afe19744ae12004b253a7edf803dd6aadfcee74ae087f35ea79c809145a2
   languageName: node
   linkType: hard
 
