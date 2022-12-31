@@ -26,12 +26,11 @@
     "postinstall": "husky install",
     "lint": "  prettier -c    src/**/*.{ts,tsx}; eslint -c .eslintrc.js       src/**/*.{ts,tsx}",
     "format": "prettier -c -w src/**/*.{ts,tsx}; eslint -c .eslintrc.js --fix src/**/*.{ts,tsx}",
-    "storybook": "      NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
-    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "build": "tsc --project tsconfig.build.json --declaration",
     "prepublishOnly": "npm run build",
-    "predeploy": "build-storybook",
-    "deploy": "gh-pages -d storybook-static"
+    "catalog:dev": "  NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
+    "catalog:build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
+    "catalog:deploy": "gh-pages -d storybook-static"
   },
   "devDependencies": {
     "@babel/core": "7.20.7",
