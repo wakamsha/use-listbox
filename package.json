@@ -1,6 +1,6 @@
 {
   "name": "@wakamsha/use-listbox",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple React Hook that Provides the behavior and accessibility implementation for a ListBox component.",
   "keywords": [
     "react",
