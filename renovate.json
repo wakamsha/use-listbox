@@ -1,0 +1,52 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "timezone": "Asia/Tokyo",
+  "labels": ["dependencies"],
+  "schedule": ["every weekend"],
+  "commitMessagePrefix": ":pill: ",
+  "reviewers": ["wakamsha"],
+  "separateMinorPatch": true,
+  "major": {
+    "stabilityDays": 7
+  },
+  "minor": {
+    "automerge": true,
+    "stabilityDays": 3
+  },
+  "patch": {
+    "automerge": true,
+    "stabilityDays": 2
+  },
+  "vulnerabilityAlerts": {
+    "labels": ["Hot fix"],
+    "reviewers": ["wakamsha"]
+  },
+  "packageRules": [
+    {
+      "groupName": "nodeJs",
+      "extends": ["group:nodeJs"],
+      "matchUpdateTypes": ["major", "minor"]
+    },
+    {
+      "groupName": "React families",
+      "matchPackagePatterns": ["^react", "^@types/react"]
+    },
+    {
+      "groupName": "Storybook families",
+      "matchPackagePatterns": ["storybook"]
+    },
+    {
+      "groupName": "ESLint families",
+      "matchPackagePatterns": ["^eslint", "^@typescript-eslint"]
+    },
+    {
+      "groupName": "Prettier families",
+      "matchPackagePatterns": ["^prettier"]
+    },
+    {
+      "groupName": "Stylelint families",
+      "matchPackagePatterns": ["^stylelint", "^@stylelint", "^postcss"]
+    }
+  ]
+}

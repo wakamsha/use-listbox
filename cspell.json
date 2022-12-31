@@ -1,4 +1,4 @@
 {
   "ignorePaths": ["./node_modules/**"],
-  "words": ["haspopup", "listbox", "noninteractive", "plusplus", "stylelint", "contextmenu", "wakamsha"]
+  "words": ["haspopup", "listbox", "noninteractive", "automerge", "plusplus", "stylelint", "contextmenu", "wakamsha"]
 }
