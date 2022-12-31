@@ -180,8 +180,14 @@ export function useListBox(itemCount: number): Response {
     if (!active) return;
 
     const handleEveryClick = (e: globalThis.MouseEvent) => {
-      if (!(e.target instanceof Element) || e.target.closest('[role="menu"]') instanceof Element) return;
-      setActive(false);
+      if (
+        !(e.target instanceof Element) ||
+        e.target.closest('[role="menu"]') instanceof Element ||
+        e.target.closest('[aria-haspopup="true"][aria-expanded="true"]') === triggerRef.current
+      )
+        return;
+
+      setActive(active => !active);
     };
 
     document.addEventListener('click', handleEveryClick);

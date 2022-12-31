@@ -26,7 +26,7 @@ export const Basic = () => {
         aria-haspopup={triggerProps['aria-haspopup']}
         aria-expanded={triggerProps['aria-expanded']}
       >
-        Menu
+        <span>Menu</span>
       </button>
       <ul className={styleMenu} role="menu" aria-hidden={!active}>
         {menuItems.map((item, index) => (
