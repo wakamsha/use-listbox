@@ -22,7 +22,7 @@
     "node": "18.12.1"
   },
   "scripts": {
-    "prepare": "husky install",
+    "postinstall": "husky install",
     "lint": "  prettier -c    src/**/*.{ts,tsx}; eslint -c .eslintrc.js       src/**/*.{ts,tsx}",
     "format": "prettier -c -w src/**/*.{ts,tsx}; eslint -c .eslintrc.js --fix src/**/*.{ts,tsx}",
     "storybook": "      NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
