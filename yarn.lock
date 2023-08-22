@@ -4176,11 +4176,11 @@ __metadata:
     eslint-config-airbnb: 19.0.4
     eslint-config-prettier: 8.6.0
     eslint-plugin-import: 2.26.0
-    eslint-plugin-jest: 27.2.1
+    eslint-plugin-jest: 27.2.3
     eslint-plugin-jsx-a11y: 6.6.1
     eslint-plugin-react: 7.31.11
     eslint-plugin-react-hooks: 4.6.0
-    eslint-plugin-storybook: 0.6.10
+    eslint-plugin-storybook: 0.6.13
     gh-pages: 4.0.0
     husky: 8.0.3
     lint-staged: 13.1.0
@@ -7617,20 +7617,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:27.2.1":
-  version: 27.2.1
-  resolution: "eslint-plugin-jest@npm:27.2.1"
+"eslint-plugin-jest@npm:27.2.3":
+  version: 27.2.3
+  resolution: "eslint-plugin-jest@npm:27.2.3"
   dependencies:
     "@typescript-eslint/utils": ^5.10.0
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^5.0.0
+    "@typescript-eslint/eslint-plugin": ^5.0.0 || ^6.0.0
     eslint: ^7.0.0 || ^8.0.0
+    jest: "*"
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
     jest:
       optional: true
-  checksum: 579a4d26304cc6748b2e6dff6c965ea7a21b618d8b051eb02727d25cf5c7767f6db8ef5237531635ff77e242b983b973e7cb8c820a4d20d5bda73358c452a8ab
+  checksum: 4c7e07f52f17749ac6fd0ff5fcd5ce30b88983ba31eeee322e4d48859f55eaa112f06172e586ad2031c00ff28bb2dfdc3d35c83895251b9c0e860fa47dfc5ff4
   languageName: node
   linkType: hard
 
@@ -7691,9 +7692,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:0.6.10":
-  version: 0.6.10
-  resolution: "eslint-plugin-storybook@npm:0.6.10"
+"eslint-plugin-storybook@npm:0.6.13":
+  version: 0.6.13
+  resolution: "eslint-plugin-storybook@npm:0.6.13"
   dependencies:
     "@storybook/csf": ^0.0.1
     "@typescript-eslint/utils": ^5.45.0
@@ -7701,7 +7702,7 @@ __metadata:
     ts-dedent: ^2.2.0
   peerDependencies:
     eslint: ">=6"
-  checksum: e0f77a90542c119a85bac4e1466204c63a0bf540e1a7ee535461d823d73391f7c6dd658dedb6b9b7fd0829f2718dde6b9784a3ec451731b07c3ae94af00f53ed
+  checksum: 4d7bebd19bbebcdc36042e1e796dfd25fbde5f9d3a3d551a4d75fe1f41f537412f53fcf6b5e544386c5e0e2ce7af30efdabeb9169df27333e3e793a26fe2f008
   languageName: node
   linkType: hard
 
