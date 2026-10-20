@@ -21,7 +21,7 @@
   "engines": {
     "node": "18.12.1"
   },
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@3.8.7",
   "scripts": {
     "postinstall": "husky install",
     "lint": "  prettier -c    src/**/*.{ts,tsx}; eslint -c .eslintrc.js       src/**/*.{ts,tsx}",
